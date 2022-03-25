@@ -1,7 +1,7 @@
 {
-  "name": "simple-list",
+  "name": "fuse-list",
   "version": "1.0.0",
-  "description": "Creates a readable string from an array of values.",
+  "description": "Provides the ability to fuse an array of items into a readable list.",
   "main": "index.js",
   "scripts": {
     "test": "jest --config jestconfig.json",

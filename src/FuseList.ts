@@ -1,18 +1,18 @@
-import { SimpleListConfig } from './SimpleListConfig';
+import { FuseListConfig } from './FuseListConfig';
 
-export class SimpleList {
+export class FuseList {
 	list: any = [];
 	config: any = null;
 
 	constructor(l: any, c: any = null) {
 		this.list = l;
-		this.config = Object.assign(new SimpleListConfig(), c);
+		this.config = Object.assign(new FuseListConfig(), c);
 		return this;
 	}
 
-	static sl(l: any, c: any = null) {
-		var simpleList = new SimpleList(l, c);
-		return simpleList.generateString();
+	static fuseList(l: any, c: any = null) {
+		var fuseList = new FuseList(l, c);
+		return fuseList.generateString();
 	}
 
 	generateString() {

@@ -1,5 +1,5 @@
-import { SimpleList } from './SimpleList';
+import { FuseList } from './FuseList';
 
-export const sl = (l: any, c: any = null) => {
-	return SimpleList.sl(l, c);
+export const fuseList = (l: any, c: any = null) => {
+	return FuseList.fuseList(l, c);
 };
