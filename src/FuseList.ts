@@ -11,7 +11,7 @@ export class FuseList {
 	}
 
 	static fuseList(l: any, c: any = null) {
-		var fuseList = new FuseList(l, c);
+		const fuseList = new FuseList(l, c);
 		return fuseList.generateString();
 	}
 
@@ -19,25 +19,26 @@ export class FuseList {
 		if(!this.config) return null;
 		if(!this.list || !Array.isArray(this.list)) return null;
 
-		var generatedString = "";
-		var itemPrefix = this.config.itemPrefix ? this.config.itemPrefix : "";
-		var itemSuffix = this.config.itemSuffix ? this.config.itemSuffix : "";
-		var separator = this.config.separator ? this.config.separator : "";
+		let generatedString = "";
+		const itemPrefix = this.config.itemPrefix ? this.config.itemPrefix : "";
+		const itemSuffix = this.config.itemSuffix ? this.config.itemSuffix : "";
+		const separator = this.config.separator ? this.config.separator : "";
 
-		var i = 0, len = this.list.length;
+		let i = 0;
+		const len = this.list.length;
     while (i < len) {
-				var itemString = `${itemPrefix}${this.list[i]}`;
+				let itemString = `${itemPrefix}${this.list[i]}`;
 
-				if(i == (len - 1)) {
+				if(i === (len - 1)) {
 					itemString = `${itemString}${itemSuffix}`
-				} else if(i == (len - 2) && this.config.finalSeparator) {
-					if(this.config.separatorPosition == "beforeSuffix") {
+				} else if(i === (len - 2) && this.config.finalSeparator) {
+					if(this.config.separatorPosition === "beforeSuffix") {
 						itemString = `${itemString}${this.config.finalSeparator}${itemSuffix}`
 					} else {
 						itemString = `${itemString}${itemSuffix}${this.config.finalSeparator}`
 					}
 				} else {
-					if(this.config.separatorPosition == "beforeSuffix") {
+					if(this.config.separatorPosition === "beforeSuffix") {
 						itemString = `${itemString}${separator}${itemSuffix}`
 					} else {
 						itemString = `${itemString}${itemSuffix}${separator}`
