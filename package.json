@@ -1,7 +1,7 @@
 {
   "name": "simple-list",
   "version": "1.0.0",
-  "description": "",
+  "description": "Creates a readable string from an array of values.",
   "main": "index.js",
   "scripts": {
     "test": "jest --config jestconfig.json",
@@ -14,9 +14,14 @@
     "version" : "npm run format && git add -A src",
     "postversion" : "git push && git push --tags"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "string",
+    "separator",
+    "text",
+    "array"
+  ],
+  "author": "Travis Knight <travis@travisknight.net> (https://travisknight.net/)",
+  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^27.4.1",
     "jest": "^27.5.1",
