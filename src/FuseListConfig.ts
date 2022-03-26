@@ -1,7 +1,7 @@
 export class FuseListConfig {
   separator: string | boolean = ", ";
-  itemPrefix: string | boolean = false;
-  itemSuffix: string | boolean = false;
+  prefix: string | boolean = false;
+  suffix: string | boolean = false;
   separatorPosition: 'default' | 'beforeSuffix' = "default";
   finalSeparator: string | boolean = ' and ';
 }

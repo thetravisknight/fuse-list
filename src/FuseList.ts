@@ -4,7 +4,7 @@ export class FuseList {
 	list: any = [];
 	config: any = null;
 
-	constructor(l: any, c: any = null) {
+	constructor(l: any, c: FuseListConfig) {
 		this.list = l;
 		this.config = Object.assign(new FuseListConfig(), c);
 		return this;
@@ -20,8 +20,8 @@ export class FuseList {
 		if(!this.list || !Array.isArray(this.list)) return null;
 
 		let generatedString = "";
-		const itemPrefix = this.config.itemPrefix ? this.config.itemPrefix : "";
-		const itemSuffix = this.config.itemSuffix ? this.config.itemSuffix : "";
+		const itemPrefix = this.config.prefix ? this.config.prefix : "";
+		const itemSuffix = this.config.suffix ? this.config.suffix : "";
 		const separator = this.config.separator ? this.config.separator : "";
 
 		let i = 0;
